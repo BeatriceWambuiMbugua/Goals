@@ -17,7 +17,7 @@ export class GoalComponent implements OnInit {
       new Date(2022, 3, 12)
     ),
     new Goal(2, 'coding Angular', 'reading on Canva', new Date(2022, 3, 11)),
-    new Goal(3, 'working in pairs', 'meeting online', new Date(2022, 3, 11)),
+    new Goal(3, 'working in pairs', 'meeting online', new Date(2022, 3, 15)),
     new Goal(
       4,
       'It is easier as it seems',
