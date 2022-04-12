@@ -10,6 +10,7 @@ import { DateCountPipe } from './date-count.pipe';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatButtonModule } from '@angular/material/button';
 import { GoalFormComponent } from './goal-form/goal-form.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -25,6 +26,7 @@ import { GoalFormComponent } from './goal-form/goal-form.component';
     AppRoutingModule,
     BrowserAnimationsModule,
     MatButtonModule,
+    FormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
