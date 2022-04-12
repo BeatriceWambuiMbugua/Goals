@@ -1,0 +1,19 @@
+<div>
+  <h1>My Goals</h1>
+  <!-- *ngFor is equals to For loop in JS -->
+  <ul>
+    <div *ngFor="let goalies of goals; let i = index">
+      <li appStrikethrough>{{ goalies.name }}</li>
+      <br />
+      <button (click)="toggleDetails(i)">Toggle Details</button>
+      <br />
+      <br />
+      <app-goal-detail
+        *ngIf="goalies.showDescription"
+        [kimberly]="goalies"
+        (isComplete)="completeGoal($event, i)"
+      ></app-goal-detail>
+    </div>
+  </ul>
+  <p *ngIf="goals.length > 5">Your goals are too many</p>
+</div>

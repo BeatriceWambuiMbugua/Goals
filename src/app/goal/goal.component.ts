@@ -1,0 +1,32 @@
+import { Component, OnInit } from '@angular/core';
+import { Goal } from '../goal';
+
+@Component({
+  selector: 'app-goal',
+  templateUrl: './goal.component.html',
+  styleUrls: ['./goal.component.css'],
+})
+export class GoalComponent implements OnInit {
+  // displaying goals in Array
+
+  goals: Goal[] = [
+    new Goal(1, 'watching finding Nemo', 'finding it on Netflix'),
+    new Goal(2, 'coding Angular', 'reading on Canva'),
+    new Goal(3, 'working in pairs', 'meeting online'),
+    new Goal(4, 'It is easier as it seems', "this is William's Mantra"),
+    new Goal(5, 'to solve the blockers', 'as a group'),
+  ];
+
+  toggleDetails(index: number) {
+    this.goals[index].showDescription = !this.goals[index].showDescription;
+  }
+
+  completeGoal(isComplete: any, index: number) {
+    if (isComplete) {
+      this.goals.splice(index, 1);
+    }
+  }
+  constructor() {}
+
+  ngOnInit(): void {}
+}
