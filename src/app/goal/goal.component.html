@@ -4,7 +4,7 @@
   <ul>
     <div *ngFor="let goalies of goals; let i = index">
       <li appStrikethrough>
-        {{ goalies.name }} due on {{ goalies.completeDate | date }}
+        {{ goalies.name }} due on {{ goalies.completeDate | date | uppercase }}
       </li>
       <br />
       <button (click)="toggleDetails(i)">Toggle Details</button>
