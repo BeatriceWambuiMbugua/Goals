@@ -3,7 +3,9 @@
   <!-- *ngFor is equals to For loop in JS -->
   <ul>
     <div *ngFor="let goalies of goals; let i = index">
-      <li appStrikethrough>{{ goalies.name }}</li>
+      <li appStrikethrough>
+        {{ goalies.name }} due on {{ goalies.completeDate | date }}
+      </li>
       <br />
       <button (click)="toggleDetails(i)">Toggle Details</button>
       <br />
